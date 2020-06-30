@@ -1,0 +1,362 @@
+
+@font-face { 
+    font-family: 'ProximaNova-Regular';
+    src: url('./fonts/ProximaNova-Regular.otf');
+}
+@font-face { 
+    font-family: 'Font Awesome 5 Pro Light';
+    src: url('./fonts/Font-Awesome-5-ProLight.ttf');
+}
+
+body{
+    font-family: ProximaNova-Regular;
+    font-style: normal;
+}
+
+.lineHr hr{
+
+    height: 2px;
+    background: #C4C4C4;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+
+    max-width: 1200px;
+}
+
+.titleText {
+    font-family:  'gabriola';
+}
+
+.textConstrast {
+    color: white;
+}
+  
+.textSmallConstrast  {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .textMediumConstrast  {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  
+  .textSmallTitle  {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .textMediumTitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .textBigTitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+.header {
+    position: fixed;
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+    height: 106px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: solid 1px #C4C4C4;
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav li{
+    margin-left: 15px;
+}
+
+.nav li a{
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height */
+    
+    text-transform: uppercase;
+    
+    color: #666666;
+    text-decoration: none;
+}
+
+nav ul li:hover a{
+    color: black;
+  }
+
+  nav ul li.active a{
+    color: black;
+  }
+
+
+  nav ul li.items{
+    position: relative;
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    order: 3;
+  }
+  
+  nav ul li.items:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+    background: #73A8A0;;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+
+  
+  nav ul li.items:hover:after{
+    opacity: 1;
+    bottom: 0px;
+  }
+
+
+
+.iconButton {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.iconButton li{
+    margin-left: 30px;
+}
+
+.icon {
+    text-decoration: none;
+    border: 0px;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+
+    
+}
+
+
+
+.banner {
+
+    margin-bottom: 25px;
+    background-image: url(../img/Banner_01.png);
+    width: 1200px;
+    height: 246px;
+    flex-direction: row;
+    border: solid #c4c4c4 1px;
+    text-align: center;
+}
+
+
+.logo {
+    background-image: url(../img/logo.svg);
+    width: 138px;
+    height: 66px;
+    display: block;
+
+}
+
+
+
+.bannerTitleText{
+    margin-top: 42px;
+    font-size: 36px;
+}
+
+.bannerText {
+
+font-size: 18px;
+line-height: 18px;
+color: #666666;
+}
+
+.bonnerBtn{
+    width: 180px;
+    height: 36px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 14px;
+    border: solid 0px #73A8A0;
+    background: #73A8A0;
+}
+
+
+.positionBox{
+    position: relative;   bottom: 0; 
+    height: 100%; 
+    padding: 10px;
+}
+
+.positionText{
+    position: absolute;   
+    bottom: 0; 
+}
+
+
+
+.mainBig {
+    grid-area: mainBig;
+    background-image: url(../img/blog_001.png);
+    height: 528px;
+    width: 792px;
+
+}
+
+.mainMedium {
+    grid-area: mainMedium;
+    height: 252px;
+    width: 384px;
+
+    background-image: url(../img/podCast001.png);
+
+}
+
+.mainSmallA {
+    grid-area: mainSmallA;
+    height: 252px;
+    width: 180px;
+    background-image: url(../img/cursoCrop001.png);
+}
+
+.mainSmallB {
+    grid-area: mainSmallB;
+    height: 252px;
+    width: 180px;
+    background-image: url(../img/shop001.png);
+}
+
+
+.grid-template-areas-1 {
+
+	grid-template-areas:
+		"mainBig mainMedium mainMedium"
+		"mainBig mainSmallA mainSmallB"
+		;
+}
+
+.grid {
+    max-width: 1200px;
+    height: 528px;
+	margin: 0 auto;
+    grid-gap: 24px;
+    display: grid;
+}
+
+
+.boxRecomendada{
+    display: flex;
+
+    max-width: 1200px;
+    text-align: center;
+    
+}
+
+.boxRecomendada > div {
+    flex: 1 1 175px;
+    
+}
+
+
+.boxRecomendada > div > center > img{
+    margin-bottom: 6px;
+    
+}
+
+.boxNameText{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 11px;
+    text-align: center;
+
+    color: #666666;
+}
+.boxRecomendada > div > p {
+    padding: 0px;
+    margin: 0px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    height: 158px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    align-items: center;
+    
+
+}
+
+.footerTextString{
+    font-weight: bold;
+}
+
+.iconButtonBotton {
+    list-style-type: none;
+    display: flex;
+
+    align-items: center;
+}
+
+.iconButtonBotton li{
+    margin-right: 25px;
+}
+
+
+.transformWhite {
+    filter: brightness(0.5);
+    width: 100px;
+    height: 100px;
+  }
+
+
+
+
+
+  
+  
